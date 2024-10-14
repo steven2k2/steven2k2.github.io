@@ -1,126 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <title>Steven Thompson - Front-End & Mobile Developer</title>
+    <!-- Responsive Meta Tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Waste Management App</title>
 
-    <!-- Material Design Fonts and Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
 
-    <!-- Basic Material Design CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet"
+    />
+
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
+
+
     <style>
+        .navbar-light .navbar-nav .nav-link {
+            color: #3c4043;
+        }
+
         body {
+            background-color: #FFFFFF;
+            color: #202124;
             font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
         }
 
-        .header {
-            background-color: #4CAF50;
-            padding: 20px;
-            color: white;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        .bg-navbar {
+            background: linear-gradient(0deg, rgba(105, 145, 214, 0.08), rgba(105, 145, 214, 0.08)), #fff;
         }
 
-        .header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+        .mybackground {
+            background-color: rgba(105, 145, 214, 0.05);
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        .hero-text {
+            font-size: 22px;
         }
 
-        .content {
-            text-align: center;
+        .hero-bg {
+            background-color: rgba(105, 145, 214, 0.05);
         }
 
-        .content h2 {
-            font-size: 2rem;
-            color: #4CAF50;
-            margin-bottom: 20px;
-        }
-
-        .content p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-
-        .icon {
-            font-size: 60px;
-            color: #4CAF50;
-            margin-top: 30px;
-        }
-
-        .button {
-            margin-top: 40px;
-        }
-
-        .md-button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s;
-        }
-
-        .md-button:hover {
-            background-color: #45a049;
-        }
-
-        footer {
-            margin-top: 50px;
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            font-size: 1rem;
-        }
-
-        footer a {
-            color: #4CAF50;
-            text-decoration: none;
+        .hero-section {
+            background-size: cover;
+            height: 100vh;
         }
     </style>
 </head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70">
+<nav id="navbar" class="navbar navbar-expand-lg fixed-top bg-navbar navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">Steven Thompson</a>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navContent"
+                aria-controls="navContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-<body>
-<header class="header">
-    <h1>Waste Management App</h1>
-</header>
-
-<div class="container">
-    <div class="content">
-        <h2>Welcome to Waste Management</h2>
-        <p>This app helps council staff manage and track rubbish, recycling, and green waste collection efficiently. Built with modern web technologies and a focus on clean design and user experience.</p>
-
-        <i class="material-icons icon">delete_outline</i>
-
-        <div class="button">
-            <a href="#" class="md-button">Explore the App</a>
+        <div class="collapse navbar-collapse" id="navContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">
+                        <span class="material-symbols-outlined">person</span> About Me
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">
+                        <span class="material-symbols-outlined">code</span> Skills
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#experience">
+                        <span class="material-symbols-outlined">work</span> Experience
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#achievements">
+                        <span class="material-symbols-outlined">emoji_events</span> Achievements
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">
+                        <span class="material-symbols-outlined">email</span> Contact
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
-</div>
+</nav>
 
-<footer>
-    &copy; 2024 Waste Management. Built with <a href="https://sencha.com">Ext JS</a> and <a href="https://material.io/design">Material Design</a>.
+<!-- Hero Section -->
+<section id="hero" class="jumbotron text-left text-black d-flex align-items-center hero-bg hero-section">
+    <div class="container text-left rounded-5 mybackground p-5">
+        <h1 class="display-4">Steven Thompson</h1>
+        <p class="lead hero-text">Front-End & Mobile Developer</p>
+        <p>Creating responsive web and mobile applications for over 20 years.</p>
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+    </div>
+</section>
+
+<!-- About Me -->
+<section id="about" class="container my-5">
+    <div class="row align-items-center">
+        <div class="col-md-4">
+            <img src="resources/images/steven-thompson.png" class="img-fluid rounded-circle" style="width: 96px; height: 96px;" alt="Steven Thompson" loading="lazy" />
+        </div>
+        <div class="col-md-8">
+            <h2>About Me</h2>
+            <p>
+                Highly skilled Front-End & Mobile App Developer with over 20 years of
+                experience creating responsive web applications for both mobile and
+                desktop platforms in an enterprise environment.
+            </p>
+            <a href="Steven_Thompson_Resume.pdf" class="btn btn-secondary" download>Download Resume</a>
+        </div>
+    </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-left mb-5">Skills</h2>
+        <div class="row text-center">
+            <div class="col-md-3 mb-4">
+                <span class="mdi mdi-language-html5 mdi-36px text-primary"></span>
+                <h5 class="mt-2">HTML5</h5>
+            </div>
+            <div class="col-md-3 mb-4">
+                <span class="mdi mdi-language-css3 mdi-36px text-primary"></span>
+                <h5 class="mt-2">CSS3</h5>
+            </div>
+            <div class="col-md-3 mb-4">
+                <span class="mdi mdi-language-javascript mdi-36px text-primary"></span>
+                <h5 class="mt-2">JavaScript</h5>
+            </div>
+            <div class="col-md-3 mb-4">
+                <span class="mdi mdi-cellphone mdi-36px text-primary"></span>
+                <h5 class="mt-2">Mobile Development</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Work Experience -->
+<section id="experience" class="container my-5">
+    <h2 class="text-left mb-5">Work Experience</h2>
+    <div class="timeline">
+        <div class="timeline-item mb-5">
+            <h4>MAGIQ Software</h4>
+            <h5>Mobile Software Developer (2014 - 2024)</h5>
+            <ul>
+                <li>Mobile application planning, creation, testing, deploying, and maintenance.</li>
+                <li>Collaborated closely with team members to deliver client-focused products.</li>
+                <li>Designed responsive front ends for mobile access to legacy systems.</li>
+                <li>Led the release process to app stores.</li>
+            </ul>
+        </div>
+        <div class="timeline-item mb-5">
+            <h4>Napier Computer Systems NZ</h4>
+            <h5>Software Developer (1999 - 2014)</h5>
+            <ul>
+                <li>Led software development life cycle for mobile and Windows apps.</li>
+                <li>Developed and supported offline and online applications.</li>
+                <li>Conducted testing, installation, training, and user guide creation.</li>
+                <li>Provided hardware support and UI updates.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Achievements -->
+<section id="achievements" class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Achievements</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Custom Cloud Client</h5>
+                        <p class="card-text">
+                            Designed and released a custom cloud client for mobile platforms.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Modernized UI</h5>
+                        <p class="card-text">
+                            Modernized user interfaces for mobile and desktop devices.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">App Store Releases</h5>
+                        <p class="card-text">
+                            Successfully released a native app to major app stores.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="container my-5">
+    <h2 class="text-center mb-5">Contact Me</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" aria-label="Your Name" placeholder="Your Name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" aria-label="Your Email" placeholder="Your Email">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <h4>Contact Information</h4>
+            <p><span class="mdi mdi-phone mdi-24px"></span> 04 0455296</p>
+            <p><span class="mdi mdi-email mdi-24px"></span> <a href="mailto:steven2k2@icloud.com">steven2k2@icloud.com</a></p>
+            <p><span class="mdi mdi-linkedin mdi-24px"></span> <a href="https://linkedin.com/in/steven-thompson-97083375" target="_blank">LinkedIn Profile</a></p>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Steven Thompson. All rights reserved.</p>
+    <!-- Social Media Icons using Material Design Icons -->
+    <a href="https://linkedin.com/in/steven-thompson-97083375" class="text-white mx-2">
+        <i class="mdi mdi-linkedin"></i>
+    </a>
+    <a href="https://facebook.com" class="text-white mx-2">
+        <i class="mdi mdi-facebook"></i>
+    </a>
+    <a href="https://twitter.com" class="text-white mx-2">
+        <i class="mdi mdi-twitter"></i>
+    </a>
 </footer>
-</body>
 
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
