@@ -34,6 +34,7 @@
 <body class="bg-light-subtle">
 
 <!-- Navbar -->
+<!-- Navbar -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light shadow">
     <div class="container">
         <!-- Brand Name -->
@@ -48,6 +49,7 @@
         <!-- Navbar Links -->
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="aboutme.html">About Me</a></li>
                 <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
                 <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
@@ -114,32 +116,14 @@
     </div>
 </footer>
 
-<!-- Return to Top Button -->
-<a href="#" id="return-to-top" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-3 d-flex justify-content-center align-items-center"
-   style="width: 56px; height: 56px;">
+<a href="#" id="return-to-top" aria-label="Return to Top" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-3 d-flex justify-content-center align-items-center">
     <span class="material-icons-outlined">arrow_upward</span>
 </a>
 
 <!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    // Show or hide the return-to-top button
-    window.addEventListener('scroll', function () {
-        const topButton = document.getElementById('return-to-top');
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            topButton.classList.add('visible'); // Fade in
-        } else {
-            topButton.classList.remove('visible'); // Fade out
-        }
-    });
 
-    // Smooth scroll to the top
-    document.getElementById('return-to-top').addEventListener('click', function (e) {
-        e.preventDefault(); // Prevent default anchor behavior
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-</script>
-
+<script src="js/main.js"></script>
 </body>
 
 </html>
