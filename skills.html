@@ -1,58 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>Standard View</title>
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Font: Montserrat -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/main.min.css">
+
+    <style>
+        body {
+            padding-top: 56px; /* Offset for fixed navbar */
+        }
+
+        #return-to-top {
+            opacity: 0; /* Invisible by default */
+            transition: opacity 0.3s ease-in-out; /* Smooth fade effect */
+            pointer-events: none; /* Prevent clicks when invisible */
+        }
+
+        #return-to-top.visible {
+            opacity: 1; /* Fully visible */
+            pointer-events: auto; /* Enable clicks when visible */
+        }
+    </style>
 </head>
-<body>
+
+<body class="bg-light-subtle">
 
 <!-- Navbar -->
-<nav id="navbar" class="navbar navbar-expand-lg fixed-top bg-navbar demo-navbar" role="navigation">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light shadow">
     <div class="container">
-        <a class="navbar-brand" href="#">Steven Thompson</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- Brand Name -->
+        <a class="navbar-brand fw-bold" href="#">Portfolio</a>
+
+        <!-- Toggler Button for Mobile View -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navContent">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="aboutme.html">About Me</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="skills.html">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="experience.html">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="achievements.html">Achievements</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="aboutme.html">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
 <!-- Main Content -->
-<div class="container mt-5 pt-5">
-    <h1>Skills</h1>
-    <p>This is a placeholder page where you can introduce yourself and your work. Feel free to explore the navigation links!</p>
+<div class="container my-5">
+    <h2 class="text-center">Key Skills</h2>
+    <div class="row">
+        <!-- Skill Category 1 -->
+        <div class="col-md-6">
+            <h4>Technical Expertise</h4>
+            <ul>
+                <li>Responsive front-end web development for enterprise environments.</li>
+                <li>Proficiency in HTML, CSS, JavaScript, VB .NET, MySQL, and MS Access.</li>
+                <li>Strong version control experience (SVN, Git).</li>
+                <li>Experienced in consuming and documenting RESTful APIs (OpenAPI).</li>
+                <li>Readable and logical technical documentation creation.</li>
+            </ul>
+        </div>
+        <!-- Skill Category 2 -->
+        <div class="col-md-6">
+            <h4>UI/UX and App Development</h4>
+            <ul>
+                <li>Skilled in UI/UX design and wireframe creation (Balsamiq).</li>
+                <li>Cross-platform mobile app development (Ext JS).</li>
+                <li>Released native apps to Apple App Store.</li>
+                <li>Design and development of responsive front ends for legacy enterprise systems.</li>
+                <li>Modernization of mobile and desktop user interfaces.</li>
+            </ul>
+        </div>
+        <!-- Skill Category 3 -->
+        <div class="col-md-6 mt-4">
+            <h4>Professional Skills</h4>
+            <ul>
+                <li>Goal-oriented, adaptable, and highly motivated to learn new skills.</li>
+                <li>Strong written and verbal communication skills.</li>
+                <li>Excellent analytical and problem-solving capabilities.</li>
+                <li>Loyal, hardworking, and flexible—work well individually and in teams.</li>
+            </ul>
+        </div>
+        <!-- Skill Category 4 -->
+        <div class="col-md-6 mt-4">
+            <h4>Other Achievements</h4>
+            <ul>
+                <li>Designed and released custom cloud clients for mobile platforms.</li>
+                <li>Deployed applications to over 20 clients in New Zealand and the Pacific.</li>
+                <li>Experience in offline mobile applications (PDA/GPS).</li>
+                <li>Successfully led releases to app stores (Apple and Google Play).</li>
+            </ul>
+        </div>
+    </div>
+    <div style="height: 2000px;"></div> <!-- Simulates scrolling space -->
 </div>
 
 <!-- Footer -->
-<footer class="text-center mt-5">
-    <p>&copy; 2024 Steven Thompson. All Rights Reserved.</p>
+<footer id="footer" class="footer bg-light">
+    <div class="container text-center">
+        <p>&copy; 2024 <strong>Steven Thompson</strong>. All Rights Reserved.</p>
+        <div class="social-links d-flex justify-content-center mt-2">
+            <a href="https://www.linkedin.com/in/steven-thompson-97083375/" class="me-3"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/steven2k2"><i class="bi bi-github"></i></a>
+        </div>
+        <p class="credits">Created with <a href="https://getbootstrap.com/">Bootstrap 5.3.3</a></p>
+    </div>
 </footer>
 
-<!-- Bootstrap JS (Optional) -->
+<!-- Return to Top Button -->
+<a href="#" id="return-to-top" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-3 d-flex justify-content-center align-items-center"
+   style="width: 56px; height: 56px;">
+    <span class="material-icons-outlined">arrow_upward</span>
+</a>
+
+<!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Show or hide the return-to-top button
+    window.addEventListener('scroll', function () {
+        const topButton = document.getElementById('return-to-top');
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            topButton.classList.add('visible'); // Fade in
+        } else {
+            topButton.classList.remove('visible'); // Fade out
+        }
+    });
+
+    // Smooth scroll to the top
+    document.getElementById('return-to-top').addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent default anchor behavior
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+
 </body>
+
 </html>
