@@ -31,7 +31,7 @@
     </style>
 </head>
 
-<body class="bg-dark-subtle">
+<body >
 
 <!-- Navbar -->
 <!-- Navbar -->
@@ -62,17 +62,12 @@
 
 <!-- Main Content -->
 <div class="container my-5" id="contact-page">
-    <div class="position-relative">
-        <div class="work-in-progress-stamp">
-            <span>Work In Progress</span>
-        </div>
     <h2 class="text-center mb-4 text-muted">Contact Me</h2>
     <div class="row">
         <!-- Contact Information -->
         <div class="col-md-6">
             <h4 class="text-muted">Get in Touch</h4>
             <ul class="list-unstyled text-muted">
-                <li><strong>Phone:</strong> <a href="tel:+6140455296" class="text-decoration-none text-muted">+61 404 552 96</a></li>
                 <li><strong>Email:</strong> <a href="mailto:steven2k2@icloud.com" class="text-decoration-none text-muted">steven2k2@icloud.com</a></li>
                 <li><strong>Location:</strong> Melbourne, Australia</li>
                 <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/steven-thompson-97083375" target="_blank" class="text-decoration-none text-muted">linkedin.com/in/steven-thompson-97083375</a></li>
@@ -86,21 +81,40 @@
         <!-- Contact Form -->
         <div class="col-md-6">
             <h4 class="text-muted">Send a Message</h4>
-            <form action="#" method="POST">
+            <form id="contact-form">
                 <div class="mb-3">
                     <label for="name" class="form-label text-muted">Your Name</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" disabled>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label text-muted">Your Email</label>
-                    <input type="email" class="form-control" id="email" name="_replyto" placeholder="Enter your email" disabled>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label text-muted">Message</label>
-                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Enter your message" disabled></textarea>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary" disabled>Send Message</button>
+                <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
+            <div style="height: 500px;"></div> <!-- Simulates scrolling space -->
+
+            <script>
+                document.getElementById('contact-form').addEventListener('submit', function (event) {
+                    event.preventDefault();
+
+                    const name = encodeURIComponent(document.getElementById('name').value.trim());
+                    const email = encodeURIComponent(document.getElementById('email').value.trim());
+                    const message = encodeURIComponent(document.getElementById('message').value.trim());
+
+                    if (!name || !email || !message) {
+                        alert('All fields are required!');
+                        return;
+                    }
+
+                    const mailtoLink = `mailto:steven2k2@icloud.com?subject=Message from ${name}&body=Email: ${email}%0A%0AMessage:%0A${message}`;
+                    window.location.href = mailtoLink;
+                });
+            </script>
         </div>
     </div>
 </div>
