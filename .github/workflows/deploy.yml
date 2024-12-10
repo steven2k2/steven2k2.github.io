@@ -20,4 +20,4 @@ jobs:
       - name: Run Lighthouse
         run: |
           npm install -g @lhci/cli
-          lhci autorun --collect.url=https://<your-github-pages-url>.github.io
+          lhci autorun --collect.url=https://steven2k2.github.io
