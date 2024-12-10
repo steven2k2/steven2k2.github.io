@@ -1,31 +1,35 @@
+# Workflow Name
 name: Deploy to GitHub Pages
 
+# Trigger workflow on push to the main branch
 on:
   push:
     branches:
-      - main
+      - main  # Only triggers on changes to the main branch
 
+# Job Definition
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Use the latest Ubuntu runner for the job
 
     steps:
+      # Step 1: Checkout the repository to access files
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3  # Action to checkout repository code
 
+      # Step 2: Setup Node.js environment
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v3  # Sets up Node.js for the workflow
         with:
-          node-version: 18
+          node-version: 18  # Specify the Node.js version to use
 
+      # Step 3: Install project dependencies
       - name: Install Dependencies
-        run: npm install
+        run: npm install  # Installs dependencies defined in package.json
 
-#      - name: Compile SASS
-#        run: npm run sass
-
+      # Step 4: Deploy the build to GitHub Pages
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@v4  # GitHub Action to deploy files to GitHub Pages
         with:
-          branch: gh-pages
-          folder: .
+          branch: gh-pages  # Target branch for the deployment
+          folder: .  # Directory to deploy (root in this case)
