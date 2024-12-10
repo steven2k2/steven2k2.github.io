@@ -1,0 +1,328 @@
+$base-color: #00BCD4;
+$md-sys-color-background: #f5fafc;
+$md-sys-color-on-background: #171c1e;
+$md-sys-color-surface: #f5fafc;
+$md-sys-color-primary: #006876;
+$md-sys-color-neutral: #72787a;
+
+
+
+// Primary Colors
+$primary-color: $md-sys-color-primary; //#00BCD4;          // Primary Color
+$light-primary-color: #B2EBF2;   // Light Primary Color
+$dark-primary-color: #0097A7;    // Dark Primary Color
+
+$color-50: #e0f7fa;
+
+// Neutral Colors
+$text-color-primary: #212121;    // Primary Text Color
+$text-color-secondary: #757575;  // Secondary Text Color
+$text-icons: #FFFFFF;            // Text and Icons (Light)
+
+$divider-color: #BDBDBD;         // Divider Color
+$accent-color: #9E9E9E;          // Accent Color
+
+$primary: $primary-color;
+$light: $md-sys-color-background;
+
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined&display=swap');
+
+// Set base font-family
+$font-family-base: 'Roboto', sans-serif;
+
+// Define heading and navigation font-families
+$font-family-heading: 'Raleway', sans-serif;
+$font-family-nav: 'Poppins', sans-serif;
+
+// Import Bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// Apply Raleway to headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+}
+
+.navbar-nav .nav-link {
+  color: #000; // Default text color
+  transition: color 0.3s ease, background-color 0.3s ease; // Smooth transition
+
+  &:hover {
+    color: $primary; // Primary color on hover
+    text-decoration: none; // Remove underline if present
+  }
+
+  &.active {
+    color: $primary; // Active link color
+    font-weight: bold; // Optional: Highlight the active link
+  }
+}
+
+
+///
+
+///****** LOGO, MENU AND ABOUT DETAILS SECTION ******/
+//.navbar {
+//  padding-top: 35px;
+//}
+//.navbar-brand {
+//  font-size: 30px;
+//  color: white;
+//}
+//.offcanvas-header {
+//  justify-content: end;
+//}
+//.nav-link {
+//  color: black;
+//}
+.info {
+  padding-top: 15px;
+}
+.info p {
+  margin: 0px;
+}
+//.navbar .info a {
+//  font-size: 23px;
+//  color: black;
+//}
+.pb-100 {
+  padding-bottom: 100px;
+}
+/********* ABOUT US SECTION  *******/
+.about-detail {
+  padding-top: 35%;
+  padding-bottom: 100px;
+}
+.about-detail h5 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: $md-sys-color-neutral; //white;
+  font-weight: 400;
+}
+.about-detail h1 {
+  font-size: 58px;
+  margin-bottom: 10px;
+  color: $primary-color; //white;
+  font-weight: bolder;
+}
+.about-detail p {
+  font-size: 22px;
+  color: $md-sys-color-on-background; //white;
+  line-height: 28px;
+}
+.about-detail button {
+  border: none;
+  padding: 15px 40px;
+  margin-top: 15px;
+  //color: pink; //white;
+  //background: #ef6735;
+}
+.about-detail button i {
+  font-size: 15px;
+  margin-left: 5px;
+}
+.typing {
+  color: #000000; //#ffffff;
+  position: relative;
+  width: fit-content;
+  padding-right: 20px;
+}
+.typing::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  background: $md-sys-color-background; //#212121;
+  animation: typing 6s steps(22) infinite, caret 1s infinite;
+}
+@-webkit-keyframes typing {
+  to {
+    width: 0;
+  }
+}
+@keyframes typing {
+  to {
+    width: 0;
+  }
+}
+@-webkit-keyframes caret {
+  50% {
+    color: transparent;
+  }
+}
+@keyframes caret {
+  50% {
+    color: transparent;
+  }
+}
+@media screen and (max-width:768px) {
+  .about-detail h5 {
+    font-size: 25px;
+  }
+  .about-detail h1 {
+    font-size: 38px !important;
+  }
+}
+@media screen and (max-width:500px) {
+  .about-detail {
+    padding-top: 15%;
+    padding-bottom: 60px;
+  }
+  .about-detail h5 {
+    font-size: 20px;
+  }
+  .about-detail h1 {
+    font-size: 35px !important;
+    margin-bottom: 5px !important;
+  }
+}
+.banner-img {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.banner-img img {
+  position: absolute;
+  bottom: 0px;
+  width: 90%;
+}
+@media screen and (max-width:768px) {
+  .banner-img {
+    height: 100%;
+  }
+}
+@media screen and (max-width:500px) {
+  .banner-img {
+    height: auto;
+  }
+  .banner-img img {
+    position: relative;
+  }
+}
+
+/// footer
+
+/*********FOOTER SECTION FOOTER SECTION FOOTER SECTION *********/
+//.footer {
+//  //background: black;
+//  //padding: 20px 0px 5px 0px;
+//}
+//.footer p {
+//  //color: white;
+//  text-align: right;
+//}
+//.footer-section i {
+//  font-size: 20px;
+//  margin-right: 10px;
+//  //color: white;
+//}
+@media screen and (max-width:500px) {
+  .footer-section {
+    text-align: center !important;
+  }
+  .footer p {
+    text-align: center;
+  }
+}
+
+
+// MINE
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  padding-top: 56px; /* Match the navbar height */
+}
+
+
+
+a {
+  //color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  //color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Global Footer
+--------------------------------------------------------------*/
+.footer {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-size: 14px;
+  padding: 40px 0;
+  position: relative;
+}
+
+.footer .copyright p {
+  margin-bottom: 0;
+}
+
+.footer .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid $base-color; //color-mix(in srgb, var(--default-color), transparent 50%);
+  font-size: 16px;
+  color: $base-color; //color-mix(in srgb, var(--default-color), transparent 50%);
+  margin: 0 5px;
+  transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.footer .credits {
+  margin-top: 10px;
+  font-size: 13px;
+  text-align: center;
+}
+
+#return-to-top {
+  opacity: 0; /* Initially invisible */
+  transition: opacity 0.3s; /* Smooth fade effect */
+}
+
+#return-to-top.visible {
+  opacity: 1; /* Fully visible */
+}
+
+
+.work-in-progress-stamp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+  z-index: 10;
+  font-size: 2rem;
+  color: rgba(255, 0, 0, 0.8); /* Semi-transparent red */
+  font-weight: bold;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.8); /* Light translucent background */
+  padding: 10px 20px;
+  border: 2px solid rgba(255, 0, 0, 0.8); /* Red border */
+  border-radius: 5px;
+  pointer-events: none; /* Prevent interaction */
+}
+
+
+figcaption {
+  color: red !important;
+  font-size: 9px;
+}

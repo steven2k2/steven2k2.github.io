@@ -1,0 +1,11 @@
+{
+  "ci": {
+    "assert": {
+      "assertions": {
+        "errors-in-console": ["warn", { "minScore": 0 }],
+        "link-name": ["warn", { "minScore": 0.9 }],
+        "unused-css-rules": ["warn", { "maxLength": 5 }]
+      }
+    }
+  }
+}
