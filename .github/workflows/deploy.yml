@@ -1,35 +1,40 @@
 # Workflow Name
-name: Deploy to GitHub Pages
+name: Deploy with Lighthouse Badges
 
-# Trigger workflow on push to the main branch
 on:
   push:
     branches:
-      - main  # Only triggers on changes to the main branch
+      - main
 
-# Job Definition
 jobs:
   deploy:
-    runs-on: ubuntu-latest  # Use the latest Ubuntu runner for the job
+    runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository to access files
+      # Step 1: Check out the repository
       - name: Checkout Repository
-        uses: actions/checkout@v3  # Action to checkout repository code
+        uses: actions/checkout@v3
 
-      # Step 2: Setup Node.js environment
+      # Step 2: Set up Node.js environment
       - name: Setup Node.js
-        uses: actions/setup-node@v3  # Sets up Node.js for the workflow
+        uses: actions/setup-node@v3
         with:
-          node-version: 18  # Specify the Node.js version to use
+          node-version: 18
 
-      # Step 3: Install project dependencies
+      # Step 3: Install dependencies
       - name: Install Dependencies
-        run: npm install  # Installs dependencies defined in package.json
+        run: npm install
 
-      # Step 4: Deploy the build to GitHub Pages
+      # Step 4: Run Lighthouse and generate badges
+      - name: Generate Lighthouse Badges
+        run: |
+          npx lighthouse-badges --url=https://steven2k2.github.io --output-path=badges
+        env:
+          NODE_ENV: production
+
+      # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4  # GitHub Action to deploy files to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages  # Target branch for the deployment
-          folder: .  # Directory to deploy (root in this case)
+          branch: gh-pages
+          folder: .
