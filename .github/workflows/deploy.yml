@@ -1,4 +1,4 @@
-name: Lighthouse CI with Badges and Bootstrap Deployment
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -6,36 +6,26 @@ on:
       - main
 
 jobs:
-  lighthouse:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Install Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: 18
 
-      - name: Install Lighthouse CI
-        run: npm install -g @lhci/cli lighthouse-badges
+      - name: Install Dependencies
+        run: npm install
 
-      - name: Run Lighthouse
-        run: |
-          lhci autorun --collect.url=https://steven2k2.github.io
-
-      - name: Generate Lighthouse Badges
-        run: |
-          lighthouse-badges --url https://steven2k2.github.io --output-path ./public/badges
-
-      - name: Prepare Deployment Files
-        run: |
-          mkdir -p ./public
-          cp -R ./badges ./public/badges
-          cp -R ./* ./public/ # Copies all Bootstrap files into the public folder, excluding `.github` and other ignored files
+#      - name: Compile SASS
+#        run: npm run sass
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: public
+          folder: .

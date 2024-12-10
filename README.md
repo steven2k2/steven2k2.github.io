@@ -29,6 +29,39 @@ This project is currently a **Work In Progress (WIP)**, and more sections, featu
 
 This project has been tested using [Lighthouse](https://developers.google.com/web/tools/lighthouse). Below are the latest scores:
 
+```plaintext
+├── .github/   
+│   ├── workflows/
+│   ├── deploy.yml
+├── assets/                     # Contains compiled output and other static assets
+│   ├── css/                    # Compiled CSS files
+│   ├── js/                     # Custom JavaScript files
+│   └── img/                    # Images used in the project
+├── badges/
+├── sass/                       # Source SASS/SCSS files
+│   ├── main.scss               # Main SASS file (imports all partials)
+│   ├── _variables.scss         # Custom Bootstrap variables
+│   ├── _custom.scss            # Additional custom styles
+│   └── bootstrap/              # Optional: Bootstrap source files if not using CDN
+├── vendor/                     # Optional directory for third-party libraries (like Bootstrap or jQuery)
+├── aboutme.html
+├── achievements.html
+├── contact.html
+├── experience.html
+├── index.html                  
+├── skills.html
+├── README.md                   # Documentation about the project
+├── package.json                # Optional: Include if using npm scripts
+├── .gitignore                  # Ignore unnecessary files (e.g., node_modules, compiled output during development)
+└── 
+
+
+```
+
+
+
+
+
 ## Performance Overview
 
 ![Performance](https://steven2k2.github.io/badges/performance.svg)
