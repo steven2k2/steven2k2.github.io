@@ -19,9 +19,9 @@
         }
 
         #return-to-top {
-            opacity: 0; /* Invisible by default */
+            opacity: 0; /* Hidden by default */
             transition: opacity 0.3s ease-in-out; /* Smooth fade effect */
-            pointer-events: none; /* Prevent clicks when invisible */
+            pointer-events: none; /* Prevent clicks when hidden */
         }
 
         #return-to-top.visible {
@@ -34,12 +34,12 @@
 <body class="bg-light-subtle">
 
 <!-- Navbar -->
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light shadow">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light shadow-sm">
     <div class="container">
-        <!-- Brand Name -->
+        <!-- Brand -->
         <a class="navbar-brand fw-bold" href="#">Portfolio</a>
 
-        <!-- Toggler Button for Mobile View -->
+        <!-- Mobile Toggle -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -50,7 +50,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="aboutme.html">About Me</a></li>
-                <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                <li class="nav-item"><a class="nav-link active" href="skills.html">Skills</a></li>
                 <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
                 <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -61,57 +61,56 @@
 
 <!-- Main Content -->
 <div class="container my-5">
-    <h2 class="text-center">Key Skills</h2>
-    <div class="row">
-        <!-- Skill Category 1 -->
+    <h2 class="text-center mb-4">Key Skills</h2>
+    <div class="row gy-4">
+        <!-- Technical Expertise -->
         <div class="col-md-6">
             <h4>Technical Expertise</h4>
             <ul>
-                <li>Responsive front-end web development for enterprise environments.</li>
-                <li>Proficiency in HTML, CSS, JavaScript, VB .NET, MySQL, and MS Access.</li>
-                <li>Strong version control experience (SVN, Git).</li>
-                <li>Experienced in consuming and documenting RESTful APIs (OpenAPI).</li>
-                <li>Readable and logical technical documentation creation.</li>
+                <li>Developed responsive front-end solutions for enterprise applications.</li>
+                <li>Proficient in HTML, CSS, JavaScript, and backend tools like VB .NET, MySQL, and MS Access.</li>
+                <li>Experienced with version control systems, including SVN and Git.</li>
+                <li>Skilled in consuming and documenting RESTful APIs (OpenAPI specifications).</li>
+                <li>Known for creating clear, user-friendly technical documentation.</li>
             </ul>
         </div>
-        <!-- Skill Category 2 -->
+        <!-- UI/UX and App Development -->
         <div class="col-md-6">
             <h4>UI/UX and App Development</h4>
             <ul>
-                <li>Skilled in UI/UX design and wireframe creation (Balsamiq).</li>
-                <li>Cross-platform mobile app development (Ext JS).</li>
-                <li>Released native apps to Apple App Store.</li>
-                <li>Design and development of responsive front ends for legacy enterprise systems.</li>
-                <li>Modernization of mobile and desktop user interfaces.</li>
+                <li>Passionate about designing intuitive user interfaces and wireframes (Balsamiq).</li>
+                <li>Built cross-platform mobile apps using frameworks like Ext JS.</li>
+                <li>Successfully published native apps to the Apple App Store.</li>
+                <li>Modernised legacy enterprise systems with responsive, user-friendly designs.</li>
+                <li>Focused on optimising user experiences across desktop and mobile platforms.</li>
             </ul>
         </div>
-        <!-- Skill Category 3 -->
-        <div class="col-md-6 mt-4">
+        <!-- Professional Skills -->
+        <div class="col-md-6">
             <h4>Professional Skills</h4>
             <ul>
-                <li>Goal-oriented, adaptable, and highly motivated to learn new skills.</li>
-                <li>Strong written and verbal communication skills.</li>
-                <li>Excellent analytical and problem-solving capabilities.</li>
-                <li>Loyal, hardworking, and flexible—work well individually and in teams.</li>
+                <li>Goal-oriented, adaptable, and committed to continuous learning.</li>
+                <li>Strong communicator with excellent writing and presentation skills.</li>
+                <li>Adept at solving complex technical challenges with logical solutions.</li>
+                <li>Reliable and hardworking, excelling both individually and in team environments.</li>
             </ul>
         </div>
-        <!-- Skill Category 4 -->
-        <div class="col-md-6 mt-4">
+        <!-- Other Achievements -->
+        <div class="col-md-6">
             <h4>Other Achievements</h4>
             <ul>
-                <li>Designed and released custom cloud clients for mobile platforms.</li>
-                <li>Deployed applications to over 20 clients in New Zealand and the Pacific.</li>
-                <li>Experience in offline mobile applications (PDA/GPS).</li>
-                <li>Successfully led releases to app stores (Apple and Google Play).</li>
+                <li>Designed and deployed custom mobile cloud solutions for diverse industries.</li>
+                <li>Delivered applications to 20+ clients across New Zealand and the Pacific.</li>
+                <li>Experienced in offline mobile apps, including PDA/GPS integrations.</li>
+                <li>Led successful releases to Apple and Google Play app stores.</li>
             </ul>
         </div>
     </div>
-    <div style="height: 2000px;"></div> <!-- Simulates scrolling space -->
 </div>
 
 <!-- Footer -->
-<footer id="footer" class="footer bg-light">
-    <div class="container text-center">
+<footer id="footer" class="footer bg-light mt-5">
+    <div class="container text-center py-3">
         <p>&copy; 2024 <strong>Steven Thompson</strong>. All Rights Reserved.</p>
         <div class="social-links d-flex justify-content-center mt-2">
             <a href="https://www.linkedin.com/in/steven-thompson-97083375/" class="me-3"><i class="bi bi-linkedin"></i></a>
@@ -127,7 +126,6 @@
 
 <!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
 <script src="assets/js/main.js"></script>
 </body>
 
