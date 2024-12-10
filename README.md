@@ -70,3 +70,6 @@ This project is currently a **Work In Progress (WIP)**, and additional sections,
 | SEO                | ![SEO Badge](badges/lighthouse_seo.svg)                            |
 
 Check out the website here: [My Portfolio](https://steven2k2.github.io)
+
+
+## Tickets
