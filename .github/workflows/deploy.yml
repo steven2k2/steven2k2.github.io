@@ -1,4 +1,3 @@
-# Updated workflow for deploying with Lighthouse report generation
 name: Deploy with Lighthouse Badges and Reports
 
 on:
@@ -46,3 +45,4 @@ jobs:
         with:
           branch: gh-pages
           folder: .
+          clean: true
