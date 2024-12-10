@@ -33,6 +33,7 @@ This project has been tested using [Lighthouse](https://developers.google.com/we
 ├── .github/   
 │   ├── workflows/
 │   ├── deploy.yml
+├── ./idea/                     
 ├── assets/                     # Contains compiled output and other static assets
 │   ├── css/                    # Compiled CSS files
 │   ├── js/                     # Custom JavaScript files
