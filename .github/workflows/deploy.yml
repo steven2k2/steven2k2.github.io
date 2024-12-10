@@ -30,13 +30,17 @@ jobs:
           -d '{"url":"https://steven2k2.github.io"}' \
           https://lighthouse-badges.netlify.app/api/generate > badges.json
 
-      - name: Save Badges
+      - name: Extract Badges
         run: |
           mkdir -p public/badges
-          jq -r '.[] | .svg | @base64d' badges.json > public/badges/
+          jq -r '.[] | .svg' badges.json | while read -r badge; do
+            name=$(echo "$badge" | jq -r '.label' | tr ' ' '-' | tr '[:upper:]' '[:lower:]')
+            content=$(echo "$badge" | jq -r '.svg')
+            echo "$content" > "public/badges/$name.svg"
+          done
 
-      - name: Deploy Updated Badges
+      - name: Deploy Badges
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: public/badges
+          folder: public
