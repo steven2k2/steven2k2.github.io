@@ -11,17 +11,21 @@
     <meta property="og:description" content="Discover the portfolio of Steven Thompson, a Front-End & Mobile Developer with over 20 years of experience.">
     <meta property="og:url" content="https://steven2k2.github.io/">
 
+    <meta name="theme-color" content="#ffffff">
+
     <title>Steven Thompson • Home</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="preload" href="assets/css/main.min.css" as="style">
 
     <style>
         body {
             padding-top: 56px;
             position: relative;
+            font-family: Arial, sans-serif;
         }
 
         body::before {
@@ -31,7 +35,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('./assets/img/100_4203.jpeg') no-repeat center center fixed;
+            background: url('./assets/img/webp/rocket-boy.webp') no-repeat center center fixed;
             background-size: cover;
             opacity: 0.5;
             z-index: -1;
@@ -63,18 +67,18 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="aboutme.html" aria-current="page">About Me</a></li>
-                <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
-                <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="aboutme.html" aria-label="Navigate to About Me">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="skills.html" aria-label="Navigate to Skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="experience.html" aria-label="Navigate to Experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="achievements.html" aria-label="Navigate to Achievements">Achievements</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html" aria-label="Navigate to Contact">Contact</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
 <!-- Main Content -->
-<div class="container-fluid my-5 text-start d-flex justify-content-end">
+<main class="container-fluid my-5 text-start d-flex justify-content-end">
     <div class="content">
         <h1 class="display-5 text-black">Steven Thompson</h1>
         <p class="typing">Front-End & Mobile <span>Developer</span></p>
@@ -83,16 +87,20 @@
             Get in Touch
         </button>
     </div>
-</div>
-<div style="height: 500px;"></div> <!-- Simulates scrolling space -->
+    <div style="height: 1000px;"></div> <!-- Simulates scrolling space -->
+</main>
 
 <!-- Footer -->
 <footer id="footer" class="footer bg-light" role="contentinfo">
     <div class="container text-center">
         <p>&copy; 2024 <strong>Steven Thompson</strong>. All Rights Reserved. • <span id="last-updated">Last Updated: Loading...</span></p>
         <div class="social-links d-flex justify-content-center mt-2">
-            <a href="https://www.linkedin.com/in/steven-thompson-97083375/" class="me-3" aria-label="Visit Steven's LinkedIn Profile"><i class="bi bi-linkedin"></i></a>
-            <a href="https://github.com/steven2k2" aria-label="Visit Steven's GitHub Profile"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/steven-thompson-97083375/" class="me-3" aria-label="Visit Steven's LinkedIn Profile">
+                <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://github.com/steven2k2" aria-label="Visit Steven's GitHub Profile">
+                <i class="bi bi-github"></i>
+            </a>
         </div>
         <p class="credits">Created with <a href="https://getbootstrap.com/" aria-label="Learn more about Bootstrap">Bootstrap 5.3.3</a></p>
     </div>
@@ -119,11 +127,15 @@
             const formattedDate = new Intl.DateTimeFormat('en-US', options).format(new Date(data.lastUpdated));
             lastUpdatedElement.textContent = `Last Updated: ${formattedDate}`;
         })
-        .catch((error) => console.error('Error fetching last updated date:', error));
+        .catch((error) => {
+            console.error('Error fetching last updated date:', error);
+            document.getElementById('last-updated').textContent = 'Last Updated: N/A';
+        });
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
 <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
