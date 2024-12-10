@@ -1,4 +1,4 @@
-name: Lighthouse CI with Badges
+name: Lighthouse CI with Badges and Bootstrap Deployment
 
 on:
   push:
@@ -28,7 +28,13 @@ jobs:
         run: |
           lighthouse-badges --url https://steven2k2.github.io --output-path ./public/badges
 
-      - name: Deploy Badges and Lighthouse Report
+      - name: Prepare Deployment Files
+        run: |
+          mkdir -p ./public
+          cp -R ./badges ./public/badges
+          cp -R ./* ./public/ # Copies all Bootstrap files into the public folder, excluding `.github` and other ignored files
+
+      - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
