@@ -25,3 +25,13 @@ This project is currently a **Work In Progress (WIP)**, and more sections, featu
 - **Bootstrap 5**: For responsive grid layouts, buttons, and UI components.
 - **Material Design Icons**: For consistent iconography.
 - **Google Fonts (Roboto)**: To provide a modern, clean font for the UI.
+## Performance Overview
+
+This project has been tested using [Lighthouse](https://developers.google.com/web/tools/lighthouse). Below are the latest scores:
+
+![Performance](https://lighthouse-badge-url/performance)
+![Accessibility](https://lighthouse-badge-url/accessibility)
+![SEO](https://lighthouse-badge-url/seo)
+![Best Practices](https://lighthouse-badge-url/best-practices)
+
+👉 [View Full Lighthouse Report](https://<link-to-report>)
