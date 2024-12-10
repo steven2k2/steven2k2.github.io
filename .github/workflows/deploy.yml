@@ -1,4 +1,4 @@
-name: Lighthouse CI
+name: Lighthouse CI with Badges
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
           node-version: '18'
 
       - name: Install Lighthouse CI
-        run: npm install -g @lhci/cli
+        run: npm install -g @lhci/cli lighthouse-badges
 
       - name: Run Lighthouse
         run: |
@@ -26,20 +26,9 @@ jobs:
 
       - name: Generate Lighthouse Badges
         run: |
-          curl -X POST -H "Content-Type: application/json" \
-          -d '{"url":"https://steven2k2.github.io"}' \
-          https://lighthouse-badges.netlify.app/api/generate > badges.json
+          lighthouse-badges --url https://steven2k2.github.io --output-path ./public/badges
 
-      - name: Extract Badges
-        run: |
-          mkdir -p public/badges
-          jq -r '.[] | .svg' badges.json | while read -r badge; do
-            name=$(echo "$badge" | jq -r '.label' | tr ' ' '-' | tr '[:upper:]' '[:lower:]')
-            content=$(echo "$badge" | jq -r '.svg')
-            echo "$content" > "public/badges/$name.svg"
-          done
-
-      - name: Deploy Badges
+      - name: Deploy Badges and Lighthouse Report
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages

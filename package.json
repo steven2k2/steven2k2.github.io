@@ -4,7 +4,8 @@
   "description": "Bootstrap portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate-badges": "lighthouse-badges --url https://steven2k2.github.io --output-path ./badges"
   },
   "keywords": [
     "Bootstrap",
