@@ -60,75 +60,13 @@ This project is currently a **Work In Progress (WIP)**, and additional sections,
 ├── .gitignore              # Ignore unnecessary files
 ```
 
-## Performance Overview
+## Website Lighthouse Performance
 
-The site is continuously tested with [Lighthouse](https://developers.google.com/web/tools/lighthouse) to ensure it meets modern web standards.
+| Metric            | Badge                                                                 |
+|--------------------|----------------------------------------------------------------------|
+| Performance        | ![Performance Badge](badges/lighthouse_performance.svg)            |
+| Accessibility      | ![Accessibility Badge](badges/lighthouse_accessibility.svg)        |
+| Best Practices     | ![Best Practices Badge](badges/lighthouse_best-practices.svg)      |
+| SEO                | ![SEO Badge](badges/lighthouse_seo.svg)                            |
 
-![Performance](https://steven2k2.github.io/badges/performance.svg)
-![Accessibility](https://steven2k2.github.io/badges/accessibility.svg)
-![SEO](https://steven2k2.github.io/badges/seo.svg)
-![Best Practices](https://steven2k2.github.io/badges/best-practices.svg)
-
-👉 [View Full Lighthouse Report](https://steven2k2.github.io/lighthouse-report.html)
-
----
-
-## Getting Started
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/)
-- [SASS](https://sass-lang.com/) (for compiling SCSS files)
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/steven2k2/steven2k2.github.io.git
-   cd steven2k2.github.io
-   ```
-
-2. Install dependencies (if applicable):
-   ```bash
-   npm install
-   ```
-
-3. Compile SCSS:
-   ```bash
-   npm run build-css
-   ```
-
-4. Run a development server:
-   ```bash
-   npm start
-   ```
-
-## Contributing
-
-Contributions are welcome! Please follow these steps to contribute:
-
-1. Fork the repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature-name
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m "Add feature-name"
-   ```
-4. Push to the branch:
-   ```bash
-   git push origin feature-name
-   ```
-5. Open a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- **Bootstrap**: For providing the foundation of the UI.
-- **Material Design Icons**: For the consistent and elegant icon set.
-- **Lighthouse**: For performance testing and optimization recommendations.
-- **GitHub Pages**: For hosting the site.
+Check out the website here: [My Portfolio](https://steven2k2.github.io)
