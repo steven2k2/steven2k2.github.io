@@ -25,6 +25,21 @@
     <style>
         body {
             padding-top: 56px; /* Offset for fixed navbar */
+            position: relative;
+            z-index: 0;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('./resources/images/100_4203.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            opacity: 0.5;
+            z-index: -1;
         }
 
         #return-to-top {
@@ -75,17 +90,18 @@
 </nav>
 
 <!-- Main Content -->
-<div class="container my-5">
-    <div class="about-detail">
-        <h1 class="display-1 text-primary">Steven Thompson</h1>
+<div class="container-fluid my-5 text-start d-flex justify-content-end">
+    <div class="content">
+        <h1 class="display-5 text-black">Steven Thompson</h1>
         <p class="typing">Front-End & Mobile <span>Developer</span></p>
         <p>Creating responsive web and mobile applications for over 20 years.</p>
         <button class="btn btn-primary text-uppercase" type="button" onclick="location.href='contact.html'">
             Get in Touch
-            <i class="material-icons-outlined">arrow_forward</i>
+<!--            <i class="material-icons-outlined">arrow_forward</i>-->
         </button>
     </div>
 </div>
+<div style="height: 500px;"></div> <!-- Simulates scrolling space -->
 
 <!-- Footer -->
 <footer id="footer" class="footer bg-light">
