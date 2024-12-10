@@ -1,4 +1,4 @@
-name: Deploy with Lighthouse Badges and Reports
+name: Deploy portfolio website to Git Pages
 
 on:
   push:
@@ -14,32 +14,17 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Step 2: Set up Node.js environment
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      # Step 3: Install dependencies
-      - name: Install Dependencies
-        run: npm install
-
-      # Step 4: Install lighthouse-ci globally
-      - name: Install Lighthouse CI
-        run: npm install -g @lhci/cli
-
-      # Step 5: Generate Lighthouse Badges
+      # Step 2: Generate Lighthouse Badges
       - name: Generate Lighthouse Badges
+        run: npx lighthouse-badges --url=https://steven2k2.github.io --output-path=badges
+
+      # Step 3: Get Last Commit Date
+      - name: Get Last Commit Date
         run: |
-          npx lighthouse-badges --url=https://steven2k2.github.io --output-path=badges
-        env:
-          NODE_ENV: production
+          LAST_COMMIT_DATE=$(git log -1 --format=%cd --date=iso)
+          echo "{\"lastUpdated\": \"$LAST_COMMIT_DATE\"}" > last-updated.json
 
-      # Step 6: Generate Lighthouse Report
-      - name: Generate Lighthouse Report
-        run: lhci autorun --collect.url=https://steven2k2.github.io --output-path ./reports
-
-      # Step 7: Deploy to GitHub Pages
+      # Step 4: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
