@@ -29,9 +29,11 @@ This project is currently a **Work In Progress (WIP)**, and more sections, featu
 
 This project has been tested using [Lighthouse](https://developers.google.com/web/tools/lighthouse). Below are the latest scores:
 
-![Performance](https://lighthouse-badge-url/performance)
-![Accessibility](https://lighthouse-badge-url/accessibility)
-![SEO](https://lighthouse-badge-url/seo)
-![Best Practices](https://lighthouse-badge-url/best-practices)
+## Performance Overview
 
-👉 [View Full Lighthouse Report](https://<link-to-report>)
+![Performance](https://steven2k2.github.io/badges/performance.svg)
+![Accessibility](https://steven2k2.github.io/badges/accessibility.svg)
+![SEO](https://steven2k2.github.io/badges/seo.svg)
+![Best Practices](https://steven2k2.github.io/badges/best-practices.svg)
+
+👉 [View Full Lighthouse Report](https://steven2k2.github.io/lighthouse-report.html)

@@ -17,7 +17,26 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Install Lighthouse CI
+        run: npm install -g @lhci/cli
+
       - name: Run Lighthouse
         run: |
-          npm install -g @lhci/cli
           lhci autorun --collect.url=https://steven2k2.github.io
+
+      - name: Generate Lighthouse Badges
+        run: |
+          curl -X POST -H "Content-Type: application/json" \
+          -d '{"url":"https://steven2k2.github.io"}' \
+          https://lighthouse-badges.netlify.app/api/generate > badges.json
+
+      - name: Save Badges
+        run: |
+          mkdir -p public/badges
+          jq -r '.[] | .svg | @base64d' badges.json > public/badges/
+
+      - name: Deploy Updated Badges
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: public/badges
