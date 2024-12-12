@@ -28,16 +28,16 @@ $light: $md-sys-color-background;
 // Import fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined&display=swap');
 
 // Set base font-family
 $font-family-base: 'Roboto', sans-serif;
 
 // Define heading and navigation font-families
 $font-family-heading: 'Raleway', sans-serif;
-$font-family-nav: 'Poppins', sans-serif;
+//$font-family-nav: 'Poppins', sans-serif;
 
 // Import Bootstrap
 @import '../node_modules/bootstrap/scss/bootstrap';
@@ -62,69 +62,49 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-
-///
-
-///****** LOGO, MENU AND ABOUT DETAILS SECTION ******/
-//.navbar {
-//  padding-top: 35px;
-//}
-//.navbar-brand {
-//  font-size: 30px;
-//  color: white;
-//}
-//.offcanvas-header {
-//  justify-content: end;
-//}
-//.nav-link {
-//  color: black;
-//}
 .info {
   padding-top: 15px;
 }
 .info p {
   margin: 0px;
 }
-//.navbar .info a {
-//  font-size: 23px;
-//  color: black;
-//}
+
 .pb-100 {
   padding-bottom: 100px;
 }
 /********* ABOUT US SECTION  *******/
-.about-detail {
-  padding-top: 35%;
-  padding-bottom: 100px;
-}
-.about-detail h5 {
-  font-size: 40px;
-  margin-bottom: 15px;
-  color: $md-sys-color-neutral; //white;
-  font-weight: 400;
-}
-.about-detail h1 {
-  font-size: 58px;
-  margin-bottom: 10px;
-  color: $primary-color; //white;
-  font-weight: bolder;
-}
-.about-detail p {
-  font-size: 22px;
-  color: $md-sys-color-on-background; //white;
-  line-height: 28px;
-}
-.about-detail button {
-  border: none;
-  padding: 15px 40px;
-  margin-top: 15px;
-  //color: pink; //white;
-  //background: #ef6735;
-}
-.about-detail button i {
-  font-size: 15px;
-  margin-left: 5px;
-}
+//.about-detail {
+//  padding-top: 35%;
+//  padding-bottom: 100px;
+//}
+//.about-detail h5 {
+//  font-size: 40px;
+//  margin-bottom: 15px;
+//  color: $md-sys-color-neutral; //white;
+//  font-weight: 400;
+//}
+//.about-detail h1 {
+//  font-size: 58px;
+//  margin-bottom: 10px;
+//  color: $primary-color; //white;
+//  font-weight: bolder;
+//}
+//.about-detail p {
+//  font-size: 22px;
+//  color: $md-sys-color-on-background; //white;
+//  line-height: 28px;
+//}
+//.about-detail button {
+//  border: none;
+//  padding: 15px 40px;
+//  margin-top: 15px;
+//  color: pink; //white;
+//  //background: #ef6735;
+//}
+//.about-detail button i {
+//  font-size: 15px;
+//  margin-left: 5px;
+//}
 .typing {
   color: #000000; //#ffffff;
   position: relative;
@@ -204,22 +184,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/// footer
-
-/*********FOOTER SECTION FOOTER SECTION FOOTER SECTION *********/
-//.footer {
-//  //background: black;
-//  //padding: 20px 0px 5px 0px;
-//}
-//.footer p {
-//  //color: white;
-//  text-align: right;
-//}
-//.footer-section i {
-//  font-size: 20px;
-//  margin-right: 10px;
-//  //color: white;
-//}
 @media screen and (max-width:500px) {
   .footer-section {
     text-align: center !important;
@@ -241,8 +205,6 @@ body {
   padding-top: 56px; /* Match the navbar height */
 }
 
-
-
 a {
   //color: var(--accent-color);
   text-decoration: none;
@@ -250,7 +212,6 @@ a {
 }
 
 a:hover {
-  //color: color-mix(in srgb, var(--accent-color), transparent 25%);
   text-decoration: none;
 }
 
@@ -326,3 +287,7 @@ figcaption {
   color: red !important;
   font-size: 9px;
 }
+
+
+// custom code
+@import 'custom';

@@ -73,3 +73,4 @@ Check out the website here: [My Portfolio](https://steven2k2.github.io)
 
 
 ## Tickets
+* Bug: Navbar Current Menu Selection Not Highlighted and Spelling Inconsistencies
