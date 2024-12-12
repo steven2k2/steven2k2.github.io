@@ -5,8 +5,6 @@ $md-sys-color-surface: #f5fafc;
 $md-sys-color-primary: #006876;
 $md-sys-color-neutral: #72787a;
 
-
-
 // Primary Colors
 $primary-color: $md-sys-color-primary; //#00BCD4;          // Primary Color
 $light-primary-color: #B2EBF2;   // Light Primary Color
@@ -28,9 +26,6 @@ $light: $md-sys-color-background;
 // Import fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-//@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-//@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined&display=swap');
-//@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined&display=swap');
 
 // Set base font-family
 $font-family-base: 'Roboto', sans-serif;
@@ -72,41 +67,9 @@ h1, h2, h3, h4, h5, h6 {
 .pb-100 {
   padding-bottom: 100px;
 }
-/********* ABOUT US SECTION  *******/
-//.about-detail {
-//  padding-top: 35%;
-//  padding-bottom: 100px;
-//}
-//.about-detail h5 {
-//  font-size: 40px;
-//  margin-bottom: 15px;
-//  color: $md-sys-color-neutral; //white;
-//  font-weight: 400;
-//}
-//.about-detail h1 {
-//  font-size: 58px;
-//  margin-bottom: 10px;
-//  color: $primary-color; //white;
-//  font-weight: bolder;
-//}
-//.about-detail p {
-//  font-size: 22px;
-//  color: $md-sys-color-on-background; //white;
-//  line-height: 28px;
-//}
-//.about-detail button {
-//  border: none;
-//  padding: 15px 40px;
-//  margin-top: 15px;
-//  color: pink; //white;
-//  //background: #ef6735;
-//}
-//.about-detail button i {
-//  font-size: 15px;
-//  margin-left: 5px;
-//}
+
 .typing {
-  color: #000000; //#ffffff;
+  color: #000000;
   position: relative;
   width: fit-content;
   padding-right: 20px;
@@ -284,7 +247,7 @@ a:hover {
 
 
 figcaption {
-  color: red !important;
+  color: #F44336 !important;
   font-size: 9px;
 }
 
